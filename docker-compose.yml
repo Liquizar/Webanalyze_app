@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  webanalyze-meta:
+    image: webanalyze
+    environment:
+      - WEBSITE_URL=https://meta.com
+      - LOG_PATH=/app/logs/meta/analysis.log
+    volumes:
+      - ./logs/meta:/app/logs/meta
+    ports:
+      - "3001:3000"
+
+  webanalyze-google:
+    image: webanalyze
+    environment:
+      - WEBSITE_URL=https://google.com
+      - LOG_PATH=/app/logs/google/analysis.log
+    volumes:
+      - ./logs/google:/app/logs/google
+    ports:
+      - "3002:3000" 
+
+  webanalyze-amazon:
+    image: webanalyze
+    environment:
+      - WEBSITE_URL=https://amazon.com
+      - LOG_PATH=/app/logs/amazon/analysis.log
+    volumes:
+      - ./logs/amazon:/app/logs/amazon
+    ports:
+      - "3003:3000" 
+
+  webanalyze-apple:
+    image: webanalyze
+    environment:
+      - WEBSITE_URL=https://apple.com
+      - LOG_PATH=/app/logs/apple/analysis.log
+    volumes:
+      - ./logs/apple:/app/logs/apple
+    ports:
+      - "3004:3000" 
+
+  webanalyze-netflix:
+    image: webanalyze
+    environment:
+      - WEBSITE_URL=https://netflix.com
+      - LOG_PATH=/app/logs/netflix/analysis.log
+    volumes:
+      - ./logs/netflix:/app/logs/netflix
+    ports:
+      - "3005:3000" 
+
+  webanalyze-happiestminds:
+    image: webanalyze
+    environment:
+      - WEBSITE_URL=https://happiestminds.com
+      - LOG_PATH=/app/logs/happiestminds/analysis.log
+    volumes:
+      - ./logs/happiestminds:/app/logs/happiestminds
+    ports:
+      - "3006:3000"

@@ -1,0 +1,14 @@
+{
+  "name": "webanalyze-backend",
+  "version": "1.0.0",
+  "description": "Backend server for Webanalyze application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1"
+  }
+}
